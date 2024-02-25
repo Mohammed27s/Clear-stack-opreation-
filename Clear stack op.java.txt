@@ -1,0 +1,67 @@
+
+
+//Stack clear operation
+
+import java.util.Stack;
+import java.util.Scanner;
+
+public class Clear {
+public static Stack<String> userName = new Stack<>();
+
+    public static void main(String[] args){
+
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Clearing all the Stack elements and making sure it's empty "+"\n");
+
+
+        System.out.println("Hello admin, Enter the new usernames to the system.. Hint :" +
+                ""+" (you can only enter 15 usernames to the database) ");
+
+        for(Integer i =0; i <= 9; i++) {
+
+            userName.push(in.nextLine());
+
+        }
+
+        System.out.println("the new usernames in the database of Tables Names :  "+userName.toString());
+
+
+        stackDeletion();
+
+
+
+    }
+
+    public static void stackDeletion(){
+
+
+        System.out.println("Clearing all elements from Names table from username Database : ");
+
+        for(Integer j = 9; j >= 0; j--){
+
+            Stack<String> stackEmpty = new Stack<>();
+
+            stackEmpty.push(userName.pop());
+
+        }
+
+        System.out.println("The all usernames been deleted : "+userName.toString());
+
+
+        System.out.println("------------------------------------------------------"+"\n");
+
+        System.out.println("Ensure your program can handle attempting to clear an already empty stack "+"\n");
+
+
+        System.out.println(" is this Names still have usernames ? "+userName.removeAll(userName));
+
+    }
+
+
+
+
+
+}
+
+
